@@ -7,6 +7,7 @@ import './index.css';
 import BlogList from './Components/BlogList/BlogList.js';
 import Home from './Components/Home/Home.js'
 import BlogArticle from './Components/BlogArticle/BlogArticle.js'
+import CreateBlog from './Components/CreateBlog/CreateBlog.js'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -19,10 +20,26 @@ class Index extends React.Component {
                     <div>
                         <div><Link to="/">Home</Link></div>
                         <div><Link to="/blog-list">Blog List</Link></div>
+                        <div><Link to="/create-blog">Create Post</Link></div>
             
                         <Route path='/' exact component={Home} />
-                        <Route path='/blog-list' exact component={BlogList} />
-                        <Route path='/blog-list/:id' exact render={props => <BlogArticle {...props}/>} />
+                        <Route 
+                            path='/blog-list' 
+                            exact 
+                            component={BlogList} 
+                        />
+                        <Route 
+                            path='/blog-list/:id' 
+                            exact 
+                            render={props => <BlogArticle {...props}/>} 
+                        />
+                        <Route 
+                            path='/create-blog' 
+                            exact 
+                            render={props => <CreateBlog {...props} />}
+                        />
+
+                        
                     </div>
                 </Router>
             </div>
