@@ -24,8 +24,8 @@ class BlogArticle extends React.Component {
             <div className='container'>
                 <h1>Blog Article</h1>
                 <h2>{this.state.post.title}</h2>
-                <h3>{this.state.post.title}</h3>
-                <p>{this.state.post.title}</p>
+                <h3>{this.state.post.author}</h3>
+                <p>{this.state.post.content}</p>
             </div>
         );
     }

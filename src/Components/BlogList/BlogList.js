@@ -2,10 +2,9 @@
   import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 
-  import logo from './logo.svg';
-  import './App.css';
+  import './BlogList.css';
 
-  class Blog extends React.Component {
+  class BlogList extends React.Component {
     constructor(props) {
       super(props);
 
@@ -24,10 +23,10 @@
     render() {
       return(
         <div className='container'>
-          <h1>Blog</h1>
+          <h1>Blog List</h1>
           {this.state.blogs.map(blog => 
             <li>
-              <Link to={"/blog/" + blog.id}> {blog.title} </Link>
+              <Link to={"/blog-list/" + blog.id}> {blog.title} </Link>
             </li>
           )}      
         </div>
@@ -35,4 +34,4 @@
     }
   }
 
-  export default Blog;
+  export default BlogList;

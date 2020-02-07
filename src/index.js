@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import './index.css';
 
-import Blog from './Blog.js';
+import BlogList from './Components/BlogList/BlogList.js';
 import Home from './Components/Home/Home.js'
 import BlogArticle from './Components/BlogArticle/BlogArticle.js'
 
@@ -18,11 +18,11 @@ class Index extends React.Component {
                 <Router>
                     <div>
                         <div><Link to="/">Home</Link></div>
-                        <div><Link to="/blog">BLog</Link></div>
+                        <div><Link to="/blog-list">Blog List</Link></div>
             
                         <Route path='/' exact component={Home} />
-                        <Route path='/blog' exact component={Blog} />
-                        <Route path='/blog/:id' exact render={props => <BlogArticle {...props}/>} />
+                        <Route path='/blog-list' exact component={BlogList} />
+                        <Route path='/blog-list/:id' exact render={props => <BlogArticle {...props}/>} />
                     </div>
                 </Router>
             </div>
