@@ -24,11 +24,17 @@
       return(
         <div className='container'>
           <h1>Blog List</h1>
-          {this.state.blogs.map(blog => 
-            <li>
-              <Link to={"/blog-list/" + blog.id}> {blog.title} </Link>
-            </li>
-          )}      
+          <ul className="List">
+            <div>
+              {this.state.blogs.map(blog => 
+                  <li>
+                    <Link to={"/blog-list/" + blog.id}> 
+                      <h3>{blog.title}</h3> 
+                    </Link>
+                  </li>
+              )}
+              </div>
+            </ul>      
         </div>
       );
     }

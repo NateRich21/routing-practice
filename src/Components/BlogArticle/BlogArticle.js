@@ -21,14 +21,31 @@ class BlogArticle extends React.Component {
 
     render() {
         return(
-            <div className='container'>
-                <h1>Blog Article</h1>
-                <h2>{this.state.post.title}</h2>
-                <h3>{this.state.post.author}</h3>
-                <p>{this.state.post.content}</p>
-            </div>
-        );
+     /*        <div className='BlogView'>
+                <div id='title'>
+                    <h1>{this.state.post.title}</h1>
+                </div>
+                <div id="author">
+                    <h3 >By: {this.state.post.author}</h3>
+                </div>
+                <div id='content-box'>
+                    <div id='content'>
+                        {this.state.post.content}
+                    </div>
+                </div>
+            </div> */
+
+       
+        <div className="Card">
+            <h2>{this.state.post.title}</h2>
+            <h5>by: {this.state.post.author}</h5>
+            <div className="img">Image</div>
+            <p>{this.state.post.content}</p>
+        </div>
+);
     }
 }
 
 export default BlogArticle;
+
+
