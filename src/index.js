@@ -17,11 +17,15 @@ class Index extends React.Component {
         return(
             <div className='container'>
                 <Router>
-                    <div>
-                        <div><Link to="/">Home</Link></div>
-                        <div><Link to="/blog-list">Blog List</Link></div>
-                        <div><Link to="/create-blog">Create Post</Link></div>
-            
+                    <div className='App'>
+                        <div id='Navbar'>
+                            <nav>
+                                <div><Link to="/">Home</Link></div>
+                                <div><Link to="/blog-list">Blog List</Link></div>
+                                <div><Link to="/create-blog">Create Post</Link></div>
+                            </nav>
+                        </div>
+
                         <Route path='/' exact component={Home} />
                         <Route 
                             path='/blog-list' 
