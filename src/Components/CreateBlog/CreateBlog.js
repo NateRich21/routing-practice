@@ -1,6 +1,10 @@
 import React from 'react';
 import './CreateBlog.css';
 
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+
 class CreateBlog extends React.Component {
 	constructor(props) {
 		super(props);
@@ -40,22 +44,26 @@ class CreateBlog extends React.Component {
 		return (
 			<div className='create-post-page'>
 				<div className="post-form">
-					<div id='name'>
-						<input
-							type='text'
-							value={this.state.title}
-							onChange={this.handleChange.bind(this)}
-							name='title'
-							id='name'
-							placeholder='The title of your post'/>
-					</div>
-					<div id='title'>
-						<input
-							type='text'
-							value={this.state.author}
-							onChange={this.handleChange.bind(this)}
-							name='author'
-							placeholder='Your name' />
+
+					<div className="details">
+						<div id='name'>
+							<input
+								type='text'
+								value={this.state.title}
+								onChange={this.handleChange.bind(this)}
+								name='title'
+								id='name'
+								placeholder='The title of your post'/>
+						</div>
+						<span />
+						<div id='title'>
+							<input
+								type='text'
+								value={this.state.author}
+								onChange={this.handleChange.bind(this)}
+								name='author'
+								placeholder='Your name' />
+						</div>
 					</div>
 					<div id='content'>
 						<input
@@ -65,9 +73,28 @@ class CreateBlog extends React.Component {
 							name='content'
 							placeholder='Write your post here' />
 					</div>
+					<Button onClick={this.createNewPost}>save</Button>
 				</div>
-				<button onClick={this.createNewPost}>save</button>
 			</div>
+
+
+/* 			<div>
+				<Form>
+					<row>
+						<col>
+							<Form.Control plaintext placeholder="Your name" />
+						</col>
+						<col>
+							<Form.Control plaintext placeholder="Title of your post" />
+						</col>
+					</row>
+					<row>
+						<col>
+							<Form.Control as="textarea" rows="3" />
+						</col>
+					</row>
+				</Form>
+		  	</div> */
 		);
 	}
 }

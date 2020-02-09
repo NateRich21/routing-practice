@@ -20,22 +20,7 @@ class BlogArticle extends React.Component {
     }
 
     render() {
-        return(
-     /*        <div className='BlogView'>
-                <div id='title'>
-                    <h1>{this.state.post.title}</h1>
-                </div>
-                <div id="author">
-                    <h3 >By: {this.state.post.author}</h3>
-                </div>
-                <div id='content-box'>
-                    <div id='content'>
-                        {this.state.post.content}
-                    </div>
-                </div>
-            </div> */
-
-       
+        return(       
         <div className="Card">
             <h2>{this.state.post.title}</h2>
             <h5>by: {this.state.post.author}</h5>
